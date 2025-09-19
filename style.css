@@ -1,0 +1,240 @@
+body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* Light gray-blue background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Card and Element Styling */
+        .card {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        
+        .text-dark-green {
+            color: #0b6623;
+        }
+        .bg-dark-green {
+            background-color: #0b6623;
+            transition: all 0.3s ease;
+        }
+        .bg-dark-green:hover {
+            background-color: #084c18;
+        }
+
+        /* Header Navigation */
+        .header-nav {
+            display: none;
+            gap: 1rem;
+        }
+        @media (min-width: 768px) {
+            .header-nav {
+                display: flex;
+            }
+        }
+        .header-nav a {
+            color: black;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .header-nav a:hover {
+            color: #0b6623;
+        }
+        .header-menu-button {
+            display: block;
+        }
+        @media (min-width: 768px) {
+            .header-menu-button {
+                display: none;
+            }
+        }
+        
+        
+        header {
+            padding: 0.4rem 0 !important; 
+        }
+        header h1 {
+            font-size: 1rem; 
+        }
+        .header-menu-button svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+
+        /* Home Section */
+        #home .card {
+            color: white;
+            text-align: center;
+        }
+        #home h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        @media (min-width: 640px) {
+            #home h2 {
+                font-size: 3rem;
+            }
+        }
+        #home p {
+            font-size: 1.125rem;
+            line-height: 1.625;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #home .button-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        @media (min-width: 640px) {
+            #home .button-group {
+                flex-direction: row;
+            }
+        }
+        #home .button-group a {
+            background-color: white;
+            color: #0b6623;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s;
+        }
+        #home .button-group a:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Bus Schedule Table */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        thead {
+            background-color: #e5e7eb;
+        }
+        th, td {
+            padding: 0.75rem 1.5rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            font-weight: 600;
+            color: #4b5563;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f9fafb;
+        }
+        tbody tr:hover {
+            background-color: #f3f4f6;
+            transition: background-color 0.2s;
+        }
+
+        /* Form Elements */
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #374151;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        form input:focus, form select:focus, form textarea:focus {
+            outline: none;
+            border-color: #0b6623;
+            box-shadow: 0 0 0 2px rgba(11, 102, 35, 0.2);
+        }
+
+        /* Buttons */
+        button[type="submit"] {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            color: white;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.3s;
+        }
+        button[type="submit"]:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Message Box */
+        .message-box {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 2rem;
+            display: none;
+        }
+        .message-box.success {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        .message-box.error {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+
+        /* General Spacing and Typography */
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .text-center { text-align: center; }
+        .font-bold { font-weight: 700; }
+        .prose p {
+            max-width: 65ch;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.75;
+        }
+        .prose h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        a.text-dark-green:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 768px) {
+            .grid-cols-2 {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1.5rem;
+            }
+        }
+        

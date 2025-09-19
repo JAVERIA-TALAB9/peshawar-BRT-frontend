@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zu Peshawar BRT</title>
+    <link href="style.css" rel="stylesheet">
+    </head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 1.5rem 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1 class="text-3xl font-bold text-dark-green">Zu Peshawar <span style="color: black;">BRT</span></h1>
+            <nav class="header-nav">
+                <a href="#schedule">Schedule</a>
+                <a href="#tickets">Tickets</a>
+                <a href="#about">About</a>
+            </nav>
+            <button class="header-menu-button" style="color: #4b5563; border: none; background: none; cursor: pointer; font-size: 1.5rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 1.5rem; height: 1.5rem;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="py-12">
+        <!-- Home Page Section -->
+        <section id="home" class="container" style="margin-bottom: 3rem; text-align: center;">
+            <div class="card bg-dark-green" style="padding: 2rem; padding: 4rem;">
+                <h2>Welcome to Peshawar Zu Service</h2>
+                <p style="margin-bottom: 2rem;">
+                    Peshawar Bus Rapid Transit is a state-of-the-art public transportation system serving the city of Peshawar.
+                    Experience a reliable, comfortable, and efficient journey with our modern bus fleet and dedicated routes.
+                </p>
+                <div class="button-group">
+                    <a href="#schedule">See the Schedule</a>
+                    <a href="#tickets">Buy a Ticket</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bus Timings Section -->
+        <section id="schedule" class="container" style="margin-bottom: 3rem;">
+            <div class="card">
+                <h2 class="text-4xl font-bold text-center text-dark-green" style="margin-bottom: 2rem; font-size: 2.25rem;">Bus Schedule & Timings</h2>
+                <div class="table-wrapper">
+                    <table class="bg-white">
+                        <thead>
+                            <tr>
+                                <th>Route Name</th>
+                                <th>Origin</th>
+                                <th>Destination</th>
+                                <th>First Bus</th>
+                                <th>Last Bus</th>
+                                <th>Frequency (Peak)</th>
+                                <th>Frequency (Off-Peak)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bus-schedule-table">
+                            <!-- Bus schedule rows populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticket Purchase Section -->
+        <section id="tickets" class="container" style="margin-bottom: 3rem;">
+            <div class="card">
+                <h2 class="text-4xl font-bold text-center text-dark-green" style="margin-bottom: 2rem; font-size: 2.25rem;">Purchase Your Ticket</h2>
+                <form id="ticket-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <p style="text-align: center; color: #4b5563;">Enter your journey details to purchase your Zu Card ticket. All prices are in PKR.</p>
+                    <div class="grid-cols-2">
+                        <div>
+                            <label for="origin">Origin Station</label>
+                            <select id="origin">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div>
+                            <label for="destination">Destination Station</label>
+                            <select id="destination">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="tickets">Number of Tickets</label>
+                        <input type="number" id="tickets" name="tickets" min="1" value="1">
+                    </div>
+                    <button type="submit" class="bg-dark-green" style="color: white; font-weight: 700;">
+                        Purchase Ticket
+                    </button>
+                </form>
+                <div id="message-box" class="message-box" style="display: none;"></div>
+            </div>
+        </section>
+
+        <!-- About and Complaint Section -->
+        <section id="about" class="container" style="margin-bottom: 3rem;">
+            <div class="card">
+                <h2 class="text-4xl font-bold text-center text-dark-green" style="margin-bottom: 2rem; font-size: 2.25rem;">About Zu Peshawar BRT</h2>
+                <div class="prose" style="max-width: none; margin-bottom: 2rem;">
+                    <p>Peshawar Bus Rapid Transit, known as Zu, is a modern and efficient public transport system designed to serve the city of Peshawar. Our goal is to provide a safe, reliable, and comfortable commuting experience for all residents and visitors.</p>
+                    <p>The Zu service operates on dedicated bus lanes, ensuring smooth and rapid travel, even during peak hours. Our fleet of state-of-the-art buses is equipped with modern amenities and provides easy access for people with disabilities. We are committed to reducing traffic congestion and promoting a greener environment by encouraging the use of public transport.</p>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-center text-dark-green" style="margin-bottom: 1.5rem; font-size: 1.5rem;">Submit a Complaint</h3>
+                <p style="text-align: center; color: #4b5563; margin-bottom: 1.5rem;">If you have any feedback or a complaint about our service, please use the form below. We take all submissions seriously and will do our best to address your concerns.</p>
+
+                <form id="complaint-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <label for="complaint-name">Your Name (Optional)</label>
+                        <input type="text" id="complaint-name" name="complaint-name">
+                    </div>
+                    <div>
+                        <label for="complaint-email">Your Email</label>
+                        <input type="email" id="complaint-email" name="complaint-email" required>
+                    </div>
+                    <div>
+                        <label for="complaint-message">Complaint/Feedback</label>
+                        <textarea id="complaint-message" name="complaint-message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-dark-green" style="color: white; font-weight: 700;">
+                        Submit Complaint
+                    </button>
+                </form>
+                <div id="complaint-message-box" class="message-box" style="display: none;"></div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <h3 class="text-2xl font-bold text-dark-green" style="margin-bottom: 0.5rem; font-size: 1.5rem;">Contact Us Directly</h3>
+                    <p style="color: #4b5563; margin-bottom: 1rem;">You can also reach out to our support team via email.</p>
+                    <a href="mailto:support@zupeshawar.com" class="text-dark-green" style="font-weight: 700;">support@zupeshawar.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center" style="padding: 1.5rem 0; color: #6b7280; font-size: 0.875rem; text-align: center;">
+        <p>&copy; 2025 Zu Peshawar BRT. All rights reserved. <span class="text-dark-green">TransPeshawar</span></p>
+    </footer>
+    <script src="script.js"></script>
+    </body>
+</html>
